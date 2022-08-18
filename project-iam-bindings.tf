@@ -7,7 +7,6 @@ module "project-iam-bindings" {
     "roles/bigquerydatatransfer.serviceAgent" = ["serviceAccount:service-${data.google_project.project.number}@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com"],
   }
   depends_on = [
-    module.enabled_google_apis,
-    data.http.ping_bts_api
+    module.enabled_google_apis
   ]
 }
