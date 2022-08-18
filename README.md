@@ -15,6 +15,7 @@
 - Utilize terraform `http` data provider to send a simple `GET` call to the Data Trasnfer API to list existing Transfers.
 - use the `google_client-config` data provider to retrieve `access_token` for the `http GET` call
 - This should trigger the creation of the P4SA, which we can then apply required permissions to
+- relevant code is in `jit-service-agent` (you can also have a look at the diff between main and reproduction)
 
 # Notes
 - Using [Cloud Foundation Toolkit](https://cloud.google.com/foundation-toolkit) for easier handling of enabling apis and assigning project IAM bindings.
