@@ -4,10 +4,10 @@ module "project-iam-bindings" {
   mode     = "authoritative"
 
   bindings = {
-    "roles/bigquerydatatransfer.serviceAgent" = ["serviceAccount:service-${data.google_project.project.number}@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com"],
+    "roles/bigquerydatatransfer.serviceAgent" = ["serviceAccount:${google_project_service_identity.bigquery_dts.email}"],
   }
   depends_on = [
     module.enabled_google_apis,
-    data.http.ping_bts_api
+    google_project_service_identity.bigquery_dts
   ]
 }
