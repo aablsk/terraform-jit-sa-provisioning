@@ -9,6 +9,11 @@ module "enabled_google_apis" {
     "compute.googleapis.com",
     "bigquery.googleapis.com",
     "bigquerydatatransfer.googleapis.com",
-    "iam.googleapis.com"
+    "iam.googleapis.com",
+    "cloudbuild.googleapis.com",
+    "cloudscheduler.googleapis.com",
+    "appengine.googleapis.com",
+    "container.googleapis.com",
+    "cloudkms.googleapis.com"
   ]
 }
